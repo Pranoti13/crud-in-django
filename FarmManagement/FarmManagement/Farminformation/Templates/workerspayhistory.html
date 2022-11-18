@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 10px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+    <meta charset="UTF-8">
+    <h1>Workers Payment History</h1>
+</head>
+<body>
+<table>
+  <tr>
+      <th>id</th>
+      <th>Name</th>
+      <th>DateTime</th>
+      <th>Amount</th>
+      <th>Payment Type</th>
+      <th>Mobile Number</th>
+      <th>Action</th>
+
+ {% for x in myWorkers %}
+    <tr>
+        <td>{{x.id}}</td>
+        <td>{{x.Name}}</td>
+        <td>{{x.DateTime}}</td>
+        <td>{{x.Amount}}</td>
+        <td>{{x.PaymentType}}</td>
+        <td>{{x.MobileNumber}}</td>
+        <td>
+            <a href="updateworkerpayhistory/{{x.id}}"><span class="glyphicon glyphicon-pencil">Update</span></a>
+            <a href="delete/{{x.id}}">delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+  </tr>
+</table>
+
+<center><a href="addworkerpay/" class="btn btn-primary">Add New Record</a></center>
+</body>
+</html>

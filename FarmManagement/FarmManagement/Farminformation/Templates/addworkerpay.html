@@ -1,0 +1,23 @@
+<h1>Add New Record</h1>
+<form action="addnewrecord/" method="post">
+    {% csrf_token %}
+    Name:<br>
+    <input name="name" placeholder="Please enter your name" required>
+    <br><br>
+    Date Time:<br>
+    <input type="datetime-local" name="datetime" placeholder="Please enter date" required>
+    <br><br>
+     Amount:<br>
+    <input type="number" name="amount" placeholder="Please enter amount" required>
+    <br><br>
+     Payment Type:<br>
+    <select name="payment type" id="payment type">
+        <option value="online">Online</option>
+        <option value="cash">Cash</option>
+    </select>
+    <br><br>
+     Mobile Number:<br>
+    <input type="number" name="mobile number" placeholder="Please enter mobilenumber" required>
+    <br><br>
+    <input type="submit" value="Submit">
+</form>

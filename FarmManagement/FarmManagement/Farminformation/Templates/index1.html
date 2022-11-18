@@ -1,0 +1,16 @@
+<h1>Workerdetails</h1>
+<table border="1">
+    {% for x in myWorkers %}
+    <tr>
+        <td>{{x.id}}</td>
+        <td>{{x.firstname}}</td>
+        <td>{{x.lastname}}</td>
+        <td><a href="update/{{x.id}}">update</a></td>
+        <td><a href="delete/{{x.id}}">delete</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+<p>
+    <a href ="add/">Add Workerdetails</a>
+</p>

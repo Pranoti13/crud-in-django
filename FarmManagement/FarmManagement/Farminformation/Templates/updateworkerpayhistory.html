@@ -1,0 +1,27 @@
+<h1>Update Payment History</h1>
+
+<form action="updatepayrecord/{{ myWorkers.id }}" method="post">
+  {% csrf_token %}
+  Name:<br>
+  <input name= "name" value="{{ myWorkers.Name }}">
+  <br><br>
+  Date Time:<br>
+  <input type="datetime-local" name="datetime" value ="{{ myWorkers.DateTime}}">
+  <br><br>
+  Amount:<br>
+  <input type="number" name="amount" value ="{{ myWorkers.Amount }}">
+  <br><br>
+  Payment Type:<br>
+  <select name="payment type" id="payment type " value ="{{ myWorkers.PaymentType }}">
+    <option value="online">Online</option>
+    <option value="cash">Cash</option>
+  </select>
+  <br><br>
+  Mobile Number:<br>
+  <input type="number" name="mobile number" value ="{{ myWorkers.MobileNumber}}">
+  <br><br>
+
+  <input type="submit" value="Submit">
+
+
+</form>
